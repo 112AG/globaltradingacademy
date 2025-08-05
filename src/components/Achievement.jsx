@@ -1,7 +1,13 @@
 import React from 'react'
+import certificate1 from "../assets/certificates/globalTradingAcademy-certificateone.svg";
+import certificate2 from "../assets/certificates/globalTradingAcademy-certificatetwo.svg";
+import certificate5 from "../assets/certificates/globalTradingAcademy-certificatefive.svg";
+import certificate4 from "../assets/certificates/globalTradingAcademy-certificatefour.svg";
+import certificate3 from "../assets/certificates/globalTradingAcademy-certificatethree.svg";
+
 
 function Achievement() {
-    const certificates = [];
+    const certificates = [certificate1, certificate2, certificate3, certificate4, certificate5];
   return (
     <div className='pt-[233px]'>
         <h1
@@ -17,18 +23,22 @@ function Achievement() {
         </h1>
         <p className='w-[963px] mx-auto h-[139px] text-white text-[20px] text-center font-[700] leading-[27px]'>Backed by results you can see: verified certificates, funded accounts, and real milestones  from our growing trading community.</p>
         
-        <div>
-            
-        <div
-        className="w-[418px] lg:w-[360px] 2xl:w-[418px] h-[589px] py-[16px] px-[26px] flex flex-col justify-center items-center text-white"
-        style={{
-          background:
-            "linear-gradient(92deg, rgba(130, 233, 95, 0.14) 5.1%, rgba(131, 234, 96, 0.31) 83.56%)",
-          boxShadow: "0 4px 50px 0 rgba(92, 239, 0, 0.24)",
-          backdropFilter: "blur(12.5px)",
-          WebkitBackdropFilter: "blur(12.5px)",
-        }}
-        ></div>
+        <div className="flex-wrap md:flex-wrap-reverse  justify-center z-50 relative pt-[198px] flex gap-[17px]">
+        {certificates.map((data, id) => (
+            <div
+            key={id}
+            className="w-[418px] lg:w-[360px] 2xl:w-[418px] h-[589px] py-[16px] px-[26px] flex flex-col justify-center items-center text-white"
+            style={{
+              background:
+                "linear-gradient(92deg, rgba(130, 233, 95, 0.14) 5.1%, rgba(131, 234, 96, 0.31) 83.56%)",
+              boxShadow: "0 4px 50px 0 rgba(92, 239, 0, 0.24)",
+              backdropFilter: "blur(12.5px)",
+              WebkitBackdropFilter: "blur(12.5px)",
+            }}
+            >
+                <img src={certificate1} alt="" />
+            </div>
+        ))}
         </div>
     </div>
   )
