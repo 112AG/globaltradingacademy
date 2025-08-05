@@ -4,10 +4,12 @@ import certificate2 from "../assets/certificates/globalTradingAcademy-certificat
 import certificate5 from "../assets/certificates/globalTradingAcademy-certificatefive.svg";
 import certificate4 from "../assets/certificates/globalTradingAcademy-certificatefour.svg";
 import certificate3 from "../assets/certificates/globalTradingAcademy-certificatethree.svg";
+import certificate6 from "../assets/certificates/globalTradingAcademy-certificatesix.svg";
+
 
 
 function Achievement() {
-    const certificates = [certificate1, certificate2, certificate3, certificate4, certificate5];
+    const certificates = [certificate1, certificate2, certificate3, certificate4, certificate5, certificate6];
   return (
     <div className='pt-[233px]'>
         <h1
@@ -23,11 +25,11 @@ function Achievement() {
         </h1>
         <p className='w-[963px] mx-auto h-[139px] text-white text-[20px] text-center font-[700] leading-[27px]'>Backed by results you can see: verified certificates, funded accounts, and real milestones  from our growing trading community.</p>
         
-        <div className="flex-wrap md:flex-wrap-reverse  justify-center z-50 relative pt-[198px] flex gap-[17px]">
+        <div className="flex flex-wrap items-center justify-center gap-[24px]">
         {certificates.map((data, id) => (
             <div
             key={id}
-            className="w-[418px] lg:w-[360px] 2xl:w-[418px] h-[589px] py-[16px] px-[26px] flex flex-col justify-center items-center text-white"
+            className="w-[468px] h-[589px] py-[16px] px-[26px] flex flex-col justify-center items-center text-white"
             style={{
               background:
                 "linear-gradient(92deg, rgba(130, 233, 95, 0.14) 5.1%, rgba(131, 234, 96, 0.31) 83.56%)",
@@ -36,10 +38,11 @@ function Achievement() {
               WebkitBackdropFilter: "blur(12.5px)",
             }}
             >
-                <img src={certificate1} alt="" />
+                <img src={data} alt="" />
             </div>
         ))}
         </div>
+        <button className='uppercase text-center text-[24px] font-[700] leading-'>see more</button>
     </div>
   )
 }
