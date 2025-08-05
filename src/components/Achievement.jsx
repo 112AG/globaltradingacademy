@@ -42,7 +42,7 @@ function Achievement() {
             </div>
         ))}
         </div>
-        <button className='uppercase text-center text-[24px] font-[700] leading-'>see more</button>
+        <button className='uppercase text-center text-[24px] font-[700] leading-[27px] underline'>see more</button>
     </div>
   )
 }
